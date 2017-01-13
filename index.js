@@ -1,4 +1,9 @@
 var express = require('express');
+var request = require('request');
+var cheerio = require('cheerio');
+var iconv = require('iconv-lite');
+var moment = require('moment');
+
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -10,6 +15,10 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
+  response.render('pages/index');
+});
+
+app.get('/scrape', function(request, response) {
   response.render('pages/index');
 });
 
