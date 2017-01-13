@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/scrape', function(request, response) {
-  response.render('pages/index');
+  response.render('pages/scrape');
 });
 
 app.listen(app.get('port'), function() {
