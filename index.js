@@ -33,13 +33,10 @@ app.get('/scrape', function (request, response) {
     var now = new Date();
     var nowweek = moment(now).isoWeek();
     var givenweek = moment(givenDate).isoWeek();
-
     return nowweek === givenweek;
   };
 
-
   function getCurrentLink(indexurl) {
-    var _this = this;
     fetch({
       uri: indexurl,
       encoding: null
@@ -152,7 +149,7 @@ app.get('/scrape', function (request, response) {
                                 "icon_emoji": ":hamburger:"
                               };
                               
-                              
+                              /*
                               fetch({
                                 url: "https://hooks.slack.com/services/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",
                                 method: "POST",
@@ -176,6 +173,7 @@ app.get('/scrape', function (request, response) {
                                   }
                                 }
                               });
+                              */
                               
                             });
                           }
