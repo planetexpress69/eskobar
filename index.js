@@ -25,7 +25,7 @@ app.get('/scrape', function (request, response) {
   var month = moment().month() + 1;
   var day = moment().format('DD');
 
-  let indexurl = 'http://www.esko-catering.de/cafeteria/essenplan.php';
+  var indexurl = 'http://www.esko-catering.de/cafeteria/essenplan.php';
 
   getCurrentLink(indexurl);
 
@@ -149,7 +149,7 @@ app.get('/scrape', function (request, response) {
                                 "icon_emoji": ":hamburger:"
                               };
                               
-                              /*
+                              
                               fetch({
                                 url: "https://hooks.slack.com/services/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",
                                 method: "POST",
@@ -173,7 +173,7 @@ app.get('/scrape', function (request, response) {
                                   }
                                 }
                               });
-                              */
+                              
                               
                             });
                           }
