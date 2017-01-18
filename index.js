@@ -157,12 +157,12 @@ app.get('/scrape', function (request, response) {
                               } else {
                                 if (resp.statusCode === 200) {
                                   console.log("Sending to slack succeeded!");
-                                  res.setHeader('Content-Type', 'text/html');
-                                  res.send('<html><head><meta charset="utf-8"></head><body>Done!\n <pre>' + sLines + '</pre></body></html>');
+                                  //response.setHeader('Content-Type', 'text/html');
+                                  //response.send('<html><head><meta charset="utf-8"></head><body>Done!\n <pre>' + sLines + '</pre></body></html>');
                                 } else {
                                   console.log("Statuscode: " + resp.statusCode);
-                                  res.setHeader('Content-Type', 'text/html');
-                                  res.send('<html><head><meta charset="utf-8"></head><body>Error: ' + resp.statusCode + '\n <pre>' + sLines + '</pre></body></html>');
+                                  //response.setHeader('Content-Type', 'text/html');
+                                  //response.send('<html><head><meta charset="utf-8"></head><body>Error: ' + resp.statusCode + '\n <pre>' + sLines + '</pre></body></html>');
                                 }
                               }
                             });
