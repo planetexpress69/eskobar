@@ -101,7 +101,7 @@ app.get('/scrape', function (request, response) {
 
 
                           var payload = {
-                            "channel": "rostock",
+                            "channel": "martin",
                             "username": "esko-bot",
                             "text": sLines + "\n\nGuten Appetit!",
                             "icon_emoji": ":knife_fork_plate:"
