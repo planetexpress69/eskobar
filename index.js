@@ -20,9 +20,7 @@ app.get('/', function (request, response) {
 
 app.get('/scrape', function (request, response) {
 
-  //var isoWeek = moment().isoWeek();
-  //var isoWeekday = moment().isoWeekday;
-  //var month = moment().month() + 1;
+
   var weeeek = {
     "Monday": "Montag",
     "Tuesday": "Dienstag",
@@ -36,18 +34,7 @@ app.get('/scrape', function (request, response) {
   var day = parseInt(moment().format('DD'));
   var sDay = weeeek[moment().format('dddd')];
 
-
-  //var indexurl = 'http://www.esko-catering.de/cafeteria/essenplan.php';
-
-  function todayIsInSameWeekOf(givenDate) {
-    var now = new Date();
-    var nowweek = moment(now).isoWeek();
-    var givenweek = moment(givenDate).isoWeek();
-    return nowweek === givenweek;
-  };
-
   var foodUrl = "http://www.esko-catering.de/kantinen/werkkueche-herweghstrasse.html";
-  var foodUrl = "http://www.teambender.de/parsetest.html";
 
   fetch({
     uri: foodUrl,
