@@ -107,8 +107,8 @@ app.get('/scrape', function (request, response) {
                             "icon_emoji": ":knife_fork_plate:"
                           };
 
-                          console.log(payload);
-                          return;
+                          //console.log(payload);
+
                           fetch({
                             url: "https://hooks.slack.com/services/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",
                             method: "POST",
